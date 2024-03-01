@@ -11,7 +11,7 @@ require("lazy").setup({
 	{
 		"nvim-lualine/lualine.nvim",
 
-		opts = require "plugins.opts.lualine",
+		opts = require("plugins.opts.lualine"),
 	},
 
 	{
@@ -19,10 +19,10 @@ require("lazy").setup({
 		lazy = false,
 		priority = 1000,
 
-		opts = { transparent = true, },
+		opts = { transparent = true },
 		config = function(_, opts)
 			require("tokyonight").setup(opts)
-			vim.cmd.colorscheme "tokyonight-night"
+			vim.cmd.colorscheme("tokyonight-night")
 		end,
 	},
 
@@ -32,15 +32,15 @@ require("lazy").setup({
 		event = { "BufReadPost", "BufNewFile" },
 		cmd = { "TSInstall", "TSBufEnable", "TSBufDisable", "TSModuleInfo" },
 
-		opts = require "plugins.opts.treesitter",
+		opts = require("plugins.opts.treesitter"),
 		config = function(_, opts)
 			require("nvim-treesitter.configs").setup(opts)
 		end,
 	},
 
 	{
-		'VonHeikemen/lsp-zero.nvim',
-		branch = 'v3.x',
+		"VonHeikemen/lsp-zero.nvim",
+		branch = "v3.x",
 		lazy = true,
 
 		config = false,
@@ -52,11 +52,11 @@ require("lazy").setup({
 	},
 
 	{
-		'hrsh7th/nvim-cmp',
-		event = 'InsertEnter',
+		"hrsh7th/nvim-cmp",
+		event = "InsertEnter",
 		dependencies = {
 			{
-				'L3MON4D3/LuaSnip',
+				"L3MON4D3/LuaSnip",
 				dependencies = "rafamadriz/friendly-snippets",
 
 				config = function(_, opts)
@@ -74,7 +74,7 @@ require("lazy").setup({
 					require("nvim-autopairs").setup(opts)
 
 					-- setup cmp for autopairs
-					local cmp_autopairs = require "nvim-autopairs.completion.cmp"
+					local cmp_autopairs = require("nvim-autopairs.completion.cmp")
 					require("cmp").event:on("confirm_done", cmp_autopairs.on_confirm_done())
 				end,
 			},
@@ -89,18 +89,17 @@ require("lazy").setup({
 		},
 
 		opts = function()
-			return require "plugins.opts.cmp"
+			return require("plugins.opts.cmp")
 		end,
-
 	},
 
 	{
-		'neovim/nvim-lspconfig',
-		cmd = 'LspInfo',
-		event = { 'BufReadPre', 'BufNewFile' },
+		"neovim/nvim-lspconfig",
+		cmd = "LspInfo",
+		event = { "BufReadPre", "BufNewFile" },
 
 		config = function()
-			require "plugins.opts.lspconfig"
+			require("plugins.opts.lspconfig")
 		end,
 	},
 })

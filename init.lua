@@ -1,3 +1,3 @@
-require "core"
-require "pacman"
-require "plugins"
+require("core")
+require("pacman")
+require("plugins")

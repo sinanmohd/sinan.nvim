@@ -1,8 +1,8 @@
-local path = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
+local path = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 local repo = "https://github.com/folke/lazy.nvim.git"
 
 local lazy_dl = function()
-	vim.print " 󰦗 downloading lazy.nvim"
+	vim.print(" 󰦗 downloading lazy.nvim")
 
 	vim.fn.system({
 		"git",
@@ -13,8 +13,8 @@ local lazy_dl = function()
 		path,
 	})
 
-	vim.print ""
-	vim.cmd "redraw"
+	vim.print("")
+	vim.cmd("redraw")
 end
 
 if not vim.loop.fs_stat(path) then

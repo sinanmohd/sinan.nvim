@@ -9,14 +9,14 @@ local maps = {
 					vim.api.nvim_set_option_value("colorcolumn", "", {})
 				end
 			end,
-			"Toggle 80 column hint"
+			"Toggle 80 column hint",
 		},
 	},
 
 	t = {
 		["<C-x>"] = {
 			vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true),
-			"Escape terminal mode"
+			"Escape terminal mode",
 		},
 	},
 
@@ -25,7 +25,6 @@ local maps = {
 		[">"] = { ">gv", "Indent line" },
 	},
 }
-
 
 for mode, keytab in pairs(maps) do
 	for key, fun in pairs(keytab) do
