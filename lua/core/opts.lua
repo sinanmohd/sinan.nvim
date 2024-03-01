@@ -23,4 +23,3 @@ vim.o.guicursor = false
 vim.o.showmode = false
 vim.o.numberwidth = 2
 vim.o.ruler = false
-vim.o.cmdheight = 0
