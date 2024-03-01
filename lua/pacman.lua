@@ -1,7 +1,7 @@
 local path = vim.fn.stdpath "data" .. "/lazy/lazy.nvim"
 local repo = "https://github.com/folke/lazy.nvim.git"
 
-local lazy_init = function()
+local lazy_dl = function()
 	vim.print " 󰦗 downloading lazy.nvim"
 
 	vim.fn.system({
@@ -18,6 +18,6 @@ local lazy_init = function()
 end
 
 if not vim.loop.fs_stat(path) then
-	lazy_init()
+	lazy_dl()
 end
 vim.opt.rtp:prepend(path)
