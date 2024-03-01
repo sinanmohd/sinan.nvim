@@ -4,7 +4,6 @@ local maps = {}
 maps.gitsigns = {
         n = {
                 ["<leader>gb"] = {
-                        -- TODO: remov fun
                         function()
                                 package.loaded.gitsigns.blame_line()
                         end,

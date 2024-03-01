@@ -4,8 +4,8 @@ return {
 		lualine_b = { "branch", "diff" },
 		lualine_c = {{ "buffers", mode = 2 }},
 
-		lualine_x = {},
-		lualine_y = { "diagnostics", "progress" },
+		lualine_x = { "diagnostics" },
+		lualine_y = { "progress" },
 		lualine_z = {},
 	},
 

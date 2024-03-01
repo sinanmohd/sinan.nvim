@@ -1,5 +1,5 @@
 return {
-	ensure_installed = { "lua", "c", "bash"},
+	ensure_installed = { "lua", "c", "bash", "nix", "python", "markdown" },
 	sync_install = false,
 	indent = { enable = true },
 

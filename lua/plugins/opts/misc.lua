@@ -16,4 +16,15 @@ M.gitsigns = {
   end,
 }
 
+M.luasnip = function (opts)
+  require("luasnip").config.set_config(opts)
+
+  -- vscode format
+  require("luasnip.loaders.from_vscode").lazy_load()
+  -- snipmate format
+  require("luasnip.loaders.from_snipmate").lazy_load()
+  -- lua format
+  require("luasnip.loaders.from_lua").lazy_load()
+end
+
 return M
