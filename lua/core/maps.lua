@@ -1,19 +1,29 @@
 local maps = {
-  n = {
-    ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
-  },
+	n = {
+		["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
+		["<Leader>cc"] = {
+			function()
+				if vim.api.nvim_get_option_value("colorcolumn", {}) == "" then
+					vim.api.nvim_set_option_value("colorcolumn", "80", {})
+				else
+					vim.api.nvim_set_option_value("colorcolumn", "", {})
+				end
+			end,
+			"Toggle 80 column hint"
+		},
+	},
 
-  t = {
-    ["<C-x>"] = {
-	    vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true),
-	    "Escape terminal mode"
-    },
-  },
+	t = {
+		["<C-x>"] = {
+			vim.api.nvim_replace_termcodes("<C-\\><C-N>", true, true, true),
+			"Escape terminal mode"
+		},
+	},
 
-  v = {
-    ["<"] = { "<gv", "Indent line" },
-    [">"] = { ">gv", "Indent line" },
-  },
+	v = {
+		["<"] = { "<gv", "Indent line" },
+		[">"] = { ">gv", "Indent line" },
+	},
 }
 
 
