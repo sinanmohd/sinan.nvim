@@ -33,3 +33,7 @@ lspconfig.ccls.setup({
 lspconfig.bashls.setup({})
 lspconfig.nil_ls.setup({})
 lspconfig.pyright.setup({})
+
+lspconfig.tsserver.setup({})
+lspconfig.svelte.setup({})
+lspconfig.tailwindcss.setup({})
