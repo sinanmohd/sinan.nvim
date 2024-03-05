@@ -1,5 +1,5 @@
-local lspconfig = require("lspconfig")
 local lsp_zero = require("lsp-zero")
+local lspconfig = require("lspconfig")
 
 lsp_zero.extend_lspconfig()
 lsp_zero.set_sign_icons({
