@@ -11,6 +11,7 @@ return {
 		"javascript",
 		"typescript",
 		"svelte",
+		"go",
 	},
 	sync_install = false,
 	indent = { enable = true },
