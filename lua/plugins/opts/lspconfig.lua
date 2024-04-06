@@ -24,6 +24,7 @@ lspconfig.lua_ls.setup(lsp_zero.nvim_lua_ls({
 
 lspconfig.ccls.setup({
 	init_options = {
+		compilationDatabaseDirectory = "build",
 		cache = {
 			directory = vim.fn.stdpath("cache") .. "/ccls",
 		},
