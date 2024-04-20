@@ -1,6 +1,8 @@
 local maps = {
 	n = {
-		["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
+		["<Esc>"] = { "<CMD> noh <CR>", "Clear highlights" },
+		["[b"] = { "<CMD> bprev <CR>", "Previous buffer" },
+		["]b"] = { "<CMD> bnext <CR>", "Next buffer" },
 		["<Leader>cc"] = {
 			function()
 				if vim.api.nvim_get_option_value("colorcolumn", {}) == "" then
