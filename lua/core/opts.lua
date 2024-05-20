@@ -8,6 +8,7 @@ vim.o.mouse = ""
 vim.o.number = true
 vim.o.relativenumber = true
 vim.o.signcolumn = "yes"
+vim.o.scrolloff = 10
 
 -- termux like
 vim.o.splitright = true
