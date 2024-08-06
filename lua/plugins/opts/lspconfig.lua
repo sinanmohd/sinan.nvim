@@ -50,3 +50,4 @@ lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.svelte.setup({})
 lspconfig.tailwindcss.setup({})
+lspconfig.htmx.setup{}
