@@ -43,6 +43,7 @@ lspconfig.gopls.setup({
 	},
 })
 
+lspconfig.terraformls.setup({})
 lspconfig.bashls.setup({})
 lspconfig.nil_ls.setup({})
 lspconfig.pyright.setup({})
@@ -50,4 +51,4 @@ lspconfig.pyright.setup({})
 lspconfig.tsserver.setup({})
 lspconfig.svelte.setup({})
 lspconfig.vuels.setup({})
-lspconfig.htmx.setup{}
+lspconfig.htmx.setup({})
