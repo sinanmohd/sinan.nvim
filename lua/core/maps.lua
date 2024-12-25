@@ -13,6 +13,10 @@ local maps = {
 			end,
 			"Toggle 80 column hint",
 		},
+		["<Leader>r"] = {
+			vim.lsp.buf.rename,
+			"Rename with LSP"
+		},
 	},
 
 	t = {
